@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                chmod -R 755 /var/jenkins_home
+                sh 'chmod -R 755 /var/jenkins_home'
                 sh 'echo hello'
             }
         }
