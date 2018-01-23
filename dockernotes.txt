@@ -1,0 +1,12 @@
+
+SET PASSWD FOR ROOT USER
+$ docker exec --user root -it f9c5e2ffa33a passwd
+
+LOG IN AS ROOT USER (/super)
+$ su
+
+$ apt-get install sudo
+$ sudo apt-get install maven
+
+$ sudo usermod -aG docker jenkins
+$ sudo chmod 777 /var/run/docker.sock
