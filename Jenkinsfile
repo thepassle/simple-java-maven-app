@@ -7,5 +7,11 @@ pipeline {
                 sh 'mvn -v'
             }
         }
+        stage('Bla') { 
+            steps {
+                sh 'echo BLABLABLABALBLABAL'
+            }
+        }
     }
 }
+
