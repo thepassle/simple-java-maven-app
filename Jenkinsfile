@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'echo hesadfsadsadsaddsfllo'
                 sh 'mvn -v'
+                sh 'mvn test'
             }
         }
         stage('Bla') { 
