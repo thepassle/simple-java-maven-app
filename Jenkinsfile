@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Finish') { 
             steps {
-                sh 'echo F I N I S H E D : - )'
+                sh "echo 'F I N I S H E D : - )'"
             }
         }
     }
