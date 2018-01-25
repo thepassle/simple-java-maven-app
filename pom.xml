@@ -21,6 +21,9 @@
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.7.9</version>
+            <configuration>
+              <outputDirectory>${project.build.directory}/coverage-reports/jacoco</outputDirectory>
+            </configuration>
             <executions>
                 <execution>
                     <goals>
