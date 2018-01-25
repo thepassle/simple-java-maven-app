@@ -12,7 +12,7 @@ pipeline {
             steps{
                 sh "echo Setting POM version"
                 sh "mvn -v"
-                sh "#!/bin/bash mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion} versions:commit"
+                bash "#!/bin/bash echo 'hello world'""
             }
         }
         stage('Bla') { 
