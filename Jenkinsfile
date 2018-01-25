@@ -12,7 +12,7 @@ pipeline {
             steps{
                 sh "echo Setting POM version"
                 sh "mvn -v"
-                bash "#!/bin/bash echo 'hello world'""
+                bash "#!/bin/bash echo 'hello world'"
             }
         }
         stage('Bla') { 
