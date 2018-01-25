@@ -3,10 +3,15 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'echo hesadfsadsadsaddsfllo'
+                sh 'echo Starting build'
                 sh 'mvn -v'
                 sh 'mvn test'
-                sh 'mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion} versions:commit'
+            }
+        }
+        stage('Test'){
+            steps{
+                sh "echo Setting POM version"
+                sh "mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion} versions:commit"
             }
         }
         stage('Bla') { 
