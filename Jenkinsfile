@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'echo Starting build'
                 sh 'mvn -v'
+                sh 'mvn clean'
                 sh 'mvn test'
             }
         }
@@ -15,9 +16,9 @@ pipeline {
                 sh "mvn build-helper:parse-version versions:set '-DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion}' versions:commit"
             }
         }
-        stage('Bla') { 
+        stage('Finish') { 
             steps {
-                sh 'echo BLABLABLABALBLABAL'
+                sh 'echo F I N I S H E D : - )'
             }
         }
     }
